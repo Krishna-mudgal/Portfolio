@@ -262,41 +262,30 @@
   <!-- ---------------- Contact ---------------- -->
   <div id="contact">
     <div class="container">
-      <div class="row">
-        <div class="contact-left">
-            <h1 class="sub-title">Contact Me</h1>
-            <p>
-            <a href="mailto:krishnamudgal44@gmail.com">
-                <i class="fa-solid fa-envelope"></i> krishnamudgal44@gmail.com
-            </a>
-            </p>
-            <p>
-            <a href="tel:8103231898">
-                <i class="fa-solid fa-phone"></i> 8103231898
-            </a>
-            </p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/krishna-mudgal-127a44283"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Krishna-mudgal"><i class="fa-brands fa-github"></i></a>
-                <!-- <a href=""><i class="fa-brands fa-instagram"></i></a> -->
-            </div>
+        <h1 class="sub-title">Contact Me</h1>
+
+        <p>
+        <a href="mailto:krishnamudgal44@gmail.com">
+            <i class="fa-solid fa-envelope"></i> krishnamudgal44@gmail.com
+        </a>
+        </p>
+        <p>
+        <a href="tel:8103231898">
+            <i class="fa-solid fa-phone"></i> 8103231898
+        </a>
+        </p>
+
+        <div class="social-icons">
+        <a href="https://www.linkedin.com/in/krishna-mudgal-127a44283" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Krishna-mudgal" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
         </div>
-        <div class="contact-right">
-            <form name="submit-to-google-sheet">
-                <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="Email" placeholder="Your Email" required>
-                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                <button class="btn btn2" type="submit">Submit</button>
-            </form>
-            <span id="msg"></span>
-        </div>
-      </div>
+    </div>
     </div>
 
-    <div class="copyright">
-        <p>&copy; 2025 Krishna Mudgal. All rights reserved.</p>
-    </div>
-  </div>
 
   <!-- ---------------script---------- -->
 
@@ -349,27 +338,6 @@
             sidemenu.style.right = "-200px";
         }
 
-    </script>
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyBjDEkE_jo-ADeNxgl2suHHRA8TwDbc45RYykjFNJq3KwTVfn_0xzbafeCG01uksti5A/exec'
-        const form = document.forms['submit-to-google-sheet']
-        
-        const msg = document.getElementById("msg")
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Messager sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                }, 5000)
-
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
     </script>
 
     
